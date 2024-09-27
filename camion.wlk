@@ -9,7 +9,7 @@ object camion {
     }
 
     method sonImpares() {
-        return cosas.all({c => c.peso().odd()})
+        return cosasDentro.all({c => c.peso().odd()})
     }
 
     method peso() {

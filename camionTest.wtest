@@ -1,9 +1,52 @@
+import cosas.*
 import camion.*
 
 describe "group of test for camion" {
-
-  test "first test" {
+  test "no son impares" {
+    bumblebee.transformar(robot)
+    arena.peso(150)
+    paqueteDeLadrillos.cantidad(80)
+    embalaje.cosaEnvuelta(paqueteDeLadrillos)
+    camion.cargar(bumblebee)
+    camion.cargar(arena)
+    camion.cargar(bateria)
+    camion.cargar(embalaje)
+    assert.that(not camion.sonImpares())
+  }
+  
+  test "peso total" {
+    bumblebee.transformar(robot)
+    arena.peso(150)
+    paqueteDeLadrillos.cantidad(80)
+    embalaje.cosaEnvuelta(paqueteDeLadrillos)
+    camion.cargar(bumblebee)
+    camion.cargar(arena)
+    camion.cargar(bateria)
+    camion.cargar(embalaje)
+    assert.equals(camion.peso(), 2410)
+  }
+  
+  test "existe entre" {
+    bumblebee.transformar(robot)
+    arena.peso(150)
+    paqueteDeLadrillos.cantidad(80)
+    embalaje.cosaEnvuelta(paqueteDeLadrillos)
+    camion.cargar(bumblebee)
+    camion.cargar(arena)
+    camion.cargar(bateria)
+    camion.cargar(embalaje)
     assert.that(true)
   }
-
+  
+  test "mas pesada" {
+    bumblebee.transformar(robot)
+    arena.peso(150)
+    paqueteDeLadrillos.cantidad(80)
+    embalaje.cosaEnvuelta(paqueteDeLadrillos)
+    camion.cargar(bumblebee)
+    camion.cargar(arena)
+    camion.cargar(bateria)
+    camion.cargar(embalaje)
+    assert.that(true)
+  }
 }
